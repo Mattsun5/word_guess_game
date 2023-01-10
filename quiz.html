@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type = "module"  src="quizApp.js"></script>
+    <title>word App</title>
+</head>
+<body>
+    <style>
+        body{
+            padding: 10px;
+        }
+        h1{
+            font-size: 60px;
+        }
+        #questTime{
+            /* display: flex;
+            justify-content: space-around;
+            align-items: center; */
+            /* width: 100%; */
+        }
+        #question{
+            color: rgb(90, 85, 85);
+            font-size: 45px;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            /* align-items: ; */
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        #timer{
+            font-size: 20px;
+            padding: 15px;
+        }
+        #answer{
+            margin-top: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        h2{
+            margin: 5px;
+        }
+        #about {
+            border: 1px solid green;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: antiquewhite;
+            width: 70%;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+        #answer div, #name div{
+            width: 300px;
+            border-radius: 4px;
+            border: 1px solid black;
+            padding: 15px;
+            font-size: 15px;
+            margin: auto;
+        }
+        #answer div div, #name div div{
+            display: none;
+        }
+        #error{
+            color: red;
+        }
+        [contentEditable=true]:empty:not(:focus):before {
+            content: attr(data-text);
+            color:gray
+        }
+        #container{
+            /* max-width: 700px; */
+            min-height: 90vh;
+            /* border: 1px solid black; */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #ans{
+            display: none;
+        }
+        #list{
+            list-style-type: upper-alpha;
+            /* border: 1px solid black; */
+            text-align: left;
+        }
+        #list li{
+            margin: 20px;
+        }
+        #buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            margin: 10px;
+            padding: 8px;
+            width: 150px;
+            font-size: 1rem;
+            /* background-color: green; */
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+        #done button, #start{
+            background-color: green;
+        }
+        #quit button, #replay{
+            background-color: red;
+        }
+        #done button:hover, #start:hover{
+            background: #fff;
+            color: green;
+            border: 1px solid green;
+        }
+        #quit button:hover, #replay:hover{
+            background: #fff;
+            color: red;
+            border: 1px solid red;
+        }
+        footer{
+            font-size: 25px;
+            color: rgb(153, 150, 150);
+        }
+    </style>
+    <div id = "container">
+        <div id="startScreen">
+            <h1>WORD GUESSING GAME</h1>
+            <div id="about">
+                <h2>About</h2>
+                <text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Soluta hic deleniti ratione quos nihil dolorum iusto voluptatum maiores minima atqueet 
+                    facere suscipit eligendi aliquam nobis sit, quasi consectetur magnam reiciendis animi 
+                    quis tempore vel amet consequuntur. Vel quas odio laboriosam, veritatis, inventore 
+                    quod repellendus corporis, consequuntur earum nihil labore?
+                </text>
+            </div>
+            <div id="name">
+                <div id = "player" contenteditable="true" data-text = "Player Name"></div>
+                <p id = "error"></p>
+            </div>
+            <div>
+                <button id = "start">START GAME</button>
+                <div id = "progress">
+                </div>
+            </div>
+        </div>
+        <!-- <script src="wordLibrary.js"></script> -->
+        <!-- <script src="quiz.js"></script> -->
+        <!-- <script src="questions.js"></script> -->
+        <!-- <script type = "module" src="quizApp.js"></script> -->
+        <!-- <script>
+            let submit = () => {
+                alert('in here');
+                answer = document.getElementById('divAnswer').textContent;
+                console.log(answer);
+            }
+            // let input = () => {
+            //     alert('can see');
+            //     answer = document.getElementById('divAnswer').textContent;
+            //     console.log(answer);
+            // }
+        </script> -->
+    </div>
+    <div id="ans"></div>
+</body>
+</html>
